@@ -1,0 +1,158 @@
+
+#share-wrapper {
+    position: fixed;
+    top: calc(50% - 20px);
+    left: 50px;
+    height: 40px;
+    transform: translateY(-50%);
+}
+#share-wrapper ul {
+    width: calc(5 * 45px);
+    position: relative;
+    left: calc(50%-22px);
+}
+#share-wrapper ul li {
+    width: 45px;
+}
+#share-wrapper li > a, #share-wrapper label {
+    color: #efefef;
+    border-radius: 50%;
+    text-decoration: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.45;
+    cursor: pointer;
+}
+#share-wrapper li > a#share, #share-wrapper label#share {
+    background: #7a7a7a;
+    position: relative;
+    z-index: 14;
+    opacity: 0.75;
+}
+#share-wrapper li > a#share:hover, #share-wrapper label#share:hover {
+    background: #b3b3b3;
+}
+#share-wrapper li > a#share-facebook, #share-wrapper label#share-facebook {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-twitter, #share-wrapper label#share-twitter {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-pinterest, #share-wrapper label#share-pinterest {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-linkedin, #share-wrapper label#share-linkedin {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-reddit, #share-wrapper label#share-reddit {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-google-bookmarks, #share-wrapper label#share-google-bookmarks {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-mix, #share-wrapper label#share-mix {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-pocket, #share-wrapper label#share-pocket {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-digg, #share-wrapper label#share-digg {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-blogger, #share-wrapper label#share-blogger {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-tumblr, #share-wrapper label#share-tumblr {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-flipboard, #share-wrapper label#share-flipboard {
+    background: #7a7a7a;
+}
+#share-wrapper li > a#share-hacker-news, #share-wrapper label#share-hacker-news {
+    background: #7a7a7a;
+}
+#share-wrapper li {
+    transition: all 200ms ease;
+}
+#share-wrapper li:nth-child(1) {
+    transition-delay: 16.6666666667ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 13;
+}
+#share-wrapper li:nth-child(2) {
+    transition-delay: 33.3333333333ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 12;
+}
+#share-wrapper li:nth-child(3) {
+    transition-delay: 50ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 11;
+}
+#share-wrapper li:nth-child(4) {
+    transition-delay: 66.6666666667ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 10;
+}
+#share-wrapper li:nth-child(5) {
+    transition-delay: 83.3333333333ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 9;
+}
+#share-wrapper li:nth-child(6) {
+    transition-delay: 100ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 8;
+}
+#share-wrapper li:nth-child(7) {
+    transition-delay: 116.6666666667ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 7;
+}
+#share-wrapper li:nth-child(8) {
+    transition-delay: 133.3333333333ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 6;
+}
+#share-wrapper li:nth-child(9) {
+    transition-delay: 150ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 5;
+}
+#share-wrapper li:nth-child(10) {
+    transition-delay: 166.6666666667ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 4;
+}
+#share-wrapper li:nth-child(11) {
+    transition-delay: 183.3333333333ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 3;
+}
+#share-wrapper li:nth-child(12) {
+    transition-delay: 200ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 2;
+}
+#share-wrapper li:nth-child(13) {
+    transition-delay: 216.6666666667ms;
+    opacity: 0;
+    transform: translateY(-30%);
+    z-index: 1;
+}
+#share-wrapper input:checked ~ label, #share-wrapper input:checked ~ ul li {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
