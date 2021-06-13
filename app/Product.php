@@ -70,4 +70,12 @@ class Product extends Model
         // return true;
         
     }
+    public static function getStockDetails($barcode,$odooclient){
+        $criteria = [
+                         ['barcode', '=', $barcode],
+                    ];
+         $fields = ['id','forecasted_qty'];
+         $StockCount = $odooclient->search_read('product.product', $criteria, $fields, 10);
+         return $StockCount;
+    }
 }

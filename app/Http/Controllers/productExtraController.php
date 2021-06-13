@@ -10,10 +10,29 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use App\Models\page;
 use Illuminate\Support\Facades\Session;
+use Ripoo\OdooClient;
 
 class productExtraController extends Controller
 {
     //
+    private $odooclient;
+    public function __construct()
+    {
+        //----------------------------------------------------------------------------------//
+        //Odoo Main DB
+                // $host = ' https://abcprojectwll.odoo.com';
+                // $db = 'abcprojectwll-abcqatar-production-116225';
+                // $user = 'deliverysajja@gmail.com';
+                // $password = 'abc123$';
+        //----------------------------------------------------------------------------------//
+        //test DB
+        $host = 'https://abcprojectwll-test-2662596.dev.odoo.com';
+        $db = 'abcprojectwll-test-2662596';
+        $user = 'developer@abc.uae';
+        $password = 'MUDjsEdN7S';
+        $client = new OdooClient($host, $db, $user, $password);
+        $this->odooclient = $client;
+    }
     public function index($lang,$id)
     {
         //
@@ -45,7 +64,21 @@ class productExtraController extends Controller
                                 ->take(20)
                                 ->get();
         }
-        // return $mightAlsoLike;
+ // return $mightAlsoLike;
+
+
+        // Odoo API Calling and stock updating section 
+        
+        $stockDetails = Product::getStockDetails($product->barcode,$this->odooclient);
+        if(!empty($stockDetails)){
+            if($stockDetails[0]['forecasted_qty'] != 0){
+                $product->unit_in_stock  = $stockDetails[0]['forecasted_qty'];
+            }else{
+                $product->unit_in_stock  = 0;
+            }
+        }
+        
+        //end of API Calling and stock updating
        $page = page::findorfail(4); 
         // return $product;
         return view('product.Description')->with([ 'product' => $product,
