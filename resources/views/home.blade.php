@@ -75,7 +75,32 @@
                                 <!-- <script  src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script> -->
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
-      
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "ABC CERAMICS",
+  "image": "",
+  "@id": "",
+  "url": "",
+  "telephone": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "",
+    "postalCode": "",
+    "addressCountry": ""
+  } ,
+  "sameAs": [
+    "https://www.facebook.com/abcgroupuae",
+    "https://www.instagram.com/abcgroupuae/",
+    "https://www.linkedin.com/company/abc-mercantile-fzco-uae/?viewAsMember=true",
+    "https://www.abcgroupuae.com/",
+    "https://twitter.com/abcgroupuae",
+    "https://cz.pinterest.com/abc_group2155/_saved/"
+  ]
+}
+</script>  
 </head>
 <body >
     @include('Common.Dynamicheader')
