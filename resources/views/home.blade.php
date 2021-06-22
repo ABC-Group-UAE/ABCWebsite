@@ -78,19 +78,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WholesaleStore",
-  "name": "ABC CERAMICS",
-  "image": "",
-  "@id": "",
-  "url": "",
-  "telephone": "",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "",
-    "addressLocality": "",
-    "postalCode": "",
-    "addressCountry": ""
-  } ,
+  "@type": "Organization",
+  "name": "ABC GROUP",
+  "url": "https://www.abcgroupuae.com",
   "sameAs": [
     "https://www.facebook.com/abcgroupuae",
     "https://www.instagram.com/abcgroupuae/",
