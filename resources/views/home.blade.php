@@ -92,17 +92,18 @@
     "addressCountry": ""
   } ,
   "sameAs": [
+    "https://www.abcgroupuae.com/",
     "https://www.facebook.com/abcgroupuae",
     "https://www.instagram.com/abcgroupuae/",
     "https://www.linkedin.com/company/abc-mercantile-fzco-uae/?viewAsMember=true",
-    "https://www.abcgroupuae.com/",
+    
     "https://twitter.com/abcgroupuae",
     "https://cz.pinterest.com/abc_group2155/_saved/"
   ]
 }
 </script>  
 </head>
-<body >
+<body>
     @include('Common.Dynamicheader')
 
  <div id="ac-wrapper" style='display:none'>
@@ -269,11 +270,11 @@
     <div class="hero-section-container w-container">
       <div class="w-layout-grid msg-grid">
         <h3 id="w-node-47c6bbd8af41-f1b162d0" class="rotated-heading w-clearfix"><span class="text-span">Message from the<br> founder and Md</span></h3>
-	<!-- <img src="/abccontentbucket.s3.me-south-1.amazonaws.com/images/madanikka.jpg" width="259" height="259" id="w-node-983056b0843a-f1b162d0" alt="" class="md-img"> -->
+	          <!-- <img src="/abccontentbucket.s3.me-south-1.amazonaws.com/images/madanikka.jpg" width="259" height="259" id="w-node-983056b0843a-f1b162d0" alt="" class="md-img"> -->
       <picture>
             <source srcset="/abccontentbucket.s3.me-south-1.amazonaws.com/images/madanikka.webp" type="image/webp">
-        <img src="/abccontentbucket.s3.me-south-1.amazonaws.com/images/madanikka.jpg" width="259" height="259" id="w-node-983056b0843a-f1b162d0" alt="abc group md" class="md-img">
-    </picture>
+            <img src="/abccontentbucket.s3.me-south-1.amazonaws.com/images/madanikka.jpg" width="259" height="259" id="w-node-983056b0843a-f1b162d0" alt="abc group md" class="md-img">
+      </picture>
         <div id="w-node-63299fef606d-f1b162d0" class="message-div">
           <p class="paragraph-11">Can a business simply strive on ‘Win-Win’ principle ?  <br>
 This is the thought I had years ago.<br><br>
@@ -308,8 +309,9 @@ can solely survive on ‘Win-Win’ principle and achieve greatness.</p>
           </div>
           <div class="core-value-content">
             <p class="paragraph-5-copy">ABC provides customer experience that is not just the best, but exceptional. We
-relentlessly deliver innovative and enduring products and services that are on
-par, thus ensuring absolute customer satisfaction.</p>
+                relentlessly deliver innovative and enduring products and services that are on
+                par, thus ensuring absolute customer satisfaction.
+            </p>
           </div>
         </div>
         <div id="w-node-93a689d5e93a-f1b162d0" class="corevaluedivblock">

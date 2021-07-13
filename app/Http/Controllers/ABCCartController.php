@@ -333,7 +333,7 @@ class ABCCartController extends Controller
                 ]);
         }
         \Mail::to($mailid)->send(new \App\Mail\customercopy($products));
-        \Mail::to("media@abcgroup.ae")->send(new \App\Mail\cartmail($contact,$products));
+        \Mail::to("sales@abcgroup.ae")->send(new \App\Mail\cartmail($contact,$products));
          // return "Successfully Subscribed";
 
          $enquire_list = app('Order');
