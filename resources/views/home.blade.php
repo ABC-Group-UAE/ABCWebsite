@@ -76,7 +76,7 @@
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
 <script type="application/ld+json">
-{
+  {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ABC GROUP",
@@ -90,8 +90,7 @@
       "https://cz.pinterest.com/abc_group2155/_saved/"
     ]
   }
-    
-</script>  
+  </script>   
 </head>
 <body>
     @include('Common.Dynamicheader')
