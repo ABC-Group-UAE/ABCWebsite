@@ -88,9 +88,9 @@
         <!-- <a  style="display:flex; justify-content:center; align-items:center; " href="https://msng.link/o/?https://abcgroupuae.com/en/Description/{{$product->Product_id}}&title=abcgroupuae&summary=website&source=" _target="blank"  title="Share this page on Linkedin!">
             <i class="fa fa-instagram"></i>
         </a> -->
-            <a  style="display:flex; justify-content:center; align-items:center; " href="https://www.facebook.com/sharer/sharer.php?u=https://abcgroupuae.com/en/Description/{{$product->Product_id}}" _target="blank" title="Share this page on Facebook!">
+            <a  style="display:flex; justify-content:center; align-items:center; " id="facebookShare" href="https://www.facebook.com/sharer/sharer.php?u=https://abcgroupuae.com/en/Description/{{$product->Product_id}}" _target="blank" title="Share this page on Facebook!">
               <i class="fa fa-facebook"></i></a>
-        <a  style="display:flex; justify-content:center; align-items:center; " href="https://api.whatsapp.com/send?text=https://abcgroupuae.com/en/Description/{{$product->Product_id}}" _target="blank" title="Share On Whatsapp" >    
+        <a  style="display:flex; justify-content:center; align-items:center; " id="whatsappShare" href="https://api.whatsapp.com/send?text=https://abcgroupuae.com/en/Description/{{$product->Product_id}}" _target="blank" title="Share On Whatsapp" >    
             <i class="fa fa-whatsapp"></i>
         </a>
         </div>
@@ -717,6 +717,98 @@
           }
           $("#Description").submit();
        }
+
+
+       $("#facebookShare").on('click', function(event) {
+    event.preventDefault();
+    // alert("hi");
+    var url = "{{ route('share.count',app()->getlocale()) }}";
+            //url = url.replace("http", "https");
+            var _token = '<?php echo csrf_token() ?>';
+            var status=false;
+            console.log(url);
+            var shareURL ="https://www.facebook.com/sharer/sharer.php?u=https://abcgroupuae.com/en/Description/"+$("#Product_id").val();
+          $.ajax(
+
+                  {
+                  type: "post",
+                  url: url,
+                  data: {   
+                         _token  :_token,
+                         id: $("#Product_id").val(),
+                         medium: "facebook",
+                      },
+                  success:function(result,e) {
+                  // alert(result.message+"and"+ result.count+"and"+ result.success );
+                    console.log(result);
+                      console.log(result.status);
+                      console.log(result.date1);
+                      console.log(result.date2);
+                      if(result.status=="success"){
+                        status = true;
+                        window.open(shareURL, '_blank');
+                      }
+                   
+                    // e.preventDefault();
+                    
+                  },
+                  error:function(result) {
+                    alert('error');
+                    console.log(result);
+                    console.log(result.date1);
+                      console.log(result.date2);
+
+                  }
+           });
+    
+      
+    
+});
+$("#whatsappShare").on('click', function(event) {
+    event.preventDefault();
+    // alert("hi");
+    var url = "{{ route('share.count',app()->getlocale()) }}";
+            //url = url.replace("http", "https");
+            var _token = '<?php echo csrf_token() ?>';
+            var status=false;
+            console.log(url);
+            var shareURL ="https://api.whatsapp.com/send?text=https://abcgroupuae.com/en/Description/"+$("#Product_id").val();
+          $.ajax(
+
+                  {
+                  type: "post",
+                  url: url,
+                  data: {   
+                         _token  :_token,
+                         id: $("#Product_id").val(),
+                         medium: "whatsapp",
+                      },
+                  success:function(result,e) {
+                  // alert(result.message+"and"+ result.count+"and"+ result.success );
+                    console.log(result);
+                      console.log(result.status);
+                      console.log(result.date1);
+                      console.log(result.date2);
+                      if(result.status=="success"){
+                        status = true;
+                        window.open(shareURL, '_blank');
+                      }
+                   
+                    // e.preventDefault();
+                    
+                  },
+                  error:function(result) {
+                    alert('error');
+                    console.log(result);
+                    console.log(result.date1);
+                      console.log(result.date2);
+
+                  }
+           });
+    
+      
+    
+});
 
     </script>
 

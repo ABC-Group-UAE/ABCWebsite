@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ABC GROUP UAE</title>
+    <title>ABC GROUP UAE | ABC Ceramics Now in Sharjah</title>
     <meta name="description" content="ABC Group is dedicated to make the world a better place through innovative business and inspiring luxury living.Having the largest collection of trend setting tiles,sanitary ware and building materials manufactured by the world's best. Our mission is to serve our customers better forever.">
   <meta content="ABC Group" property="og:title">
   <meta content="ABC Group" property="twitter:title">
@@ -55,7 +55,7 @@
   gtag('config', 'G-6SQLZ5GFVC');
 </script>
 <!-- Hotjar Tracking Code for www.abcgroupuae.com -->
-<script>
+{{--<script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2429344,hjsv:6};
@@ -64,7 +64,7 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+</script>--}}
 
 
 <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
@@ -77,30 +77,20 @@
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WholesaleStore",
-  "name": "ABC CERAMICS",
-  "image": "",
-  "@id": "",
-  "url": "",
-  "telephone": "",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "",
-    "addressLocality": "",
-    "postalCode": "",
-    "addressCountry": ""
-  } ,
-  "sameAs": [
-    "https://www.abcgroupuae.com/",
-    "https://www.facebook.com/abcgroupuae",
-    "https://www.instagram.com/abcgroupuae/",
-    "https://www.linkedin.com/company/abc-mercantile-fzco-uae/?viewAsMember=true",
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ABC GROUP",
+    "url": "https://www.abcgroupuae.com",
+    "sameAs": [
+      "https://www.facebook.com/abcgroupuae",
+      "https://www.instagram.com/abcgroupuae/",
+      "https://www.linkedin.com/company/abc-mercantile-fzco-uae/?viewAsMember=true",
+      "https://www.abcgroupuae.com/",
+      "https://twitter.com/abcgroupuae",
+      "https://cz.pinterest.com/abc_group2155/_saved/"
+    ]
+  }
     
-    "https://twitter.com/abcgroupuae",
-    "https://cz.pinterest.com/abc_group2155/_saved/"
-  ]
-}
 </script>  
 </head>
 <body>
@@ -172,6 +162,7 @@
   <div class="whatsappbox"><a id="whatsappclick" href="#" class="link-block-category w-inline-block" ><img src="/abccontentbucket.s3.me-south-1.amazonaws.com/images/001-whatsapp.svg" width="35" height="35" alt="" class="whatsapp-icon"><h5 class="chat-with-us">Chat<br></h5></a></div>
   <form id="msectionform" action= "{{route('Search.Home.filter',app()->getlocale())}}" method = "get">
   <input type="hidden" name="filterCat" id="filterCat"><input type="hidden" name="filter-value" id="filter-value">
+  
   
   <div class="middle-section">
     <div class="red-category-overlapping-container w-container">

@@ -104,6 +104,7 @@ Route::get('/Category/filter','App\Http\Controllers\careerController@HomeSearchF
  Route::get('locationfilter','App\Http\Controllers\locationController@locationfilter')->name('locationfilter');
  Route::get('Presence','App\Http\Controllers\locationController@showrooms')->name('OurPresence');
  Route::post('whatsappcount','App\Http\Controllers\careerController@setWhatsAppClickcount')->name('whatsapp.count');
+ Route::post('shareCount','App\Http\Controllers\careerController@setWhatsAppSharecount')->name('share.count');
 
 // Route::resource('/category' , 'App\Http\Controllers\categoryController');
 

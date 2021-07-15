@@ -383,5 +383,71 @@ class careerController extends Controller
         
     }
 
+    function setWhatsAppSharecount(Request $request){
+        $today = Carbon::today();
+        $date="";
+        $lastshareddate = $today;
+        $lastsharedcount=0;
+        $status = "false";
+        $productId = $request->input('id');
+        $medium = $request->input('medium');
+        $Existingcount = DB::table('whatsapp_share_count')
+                        ->where('product_id',$productId)
+                        ->where('social_media',$medium)
+                        ->orderBy('slno', 'desc')->first();
+        if(!empty($Existingcount)){
+            $date = $Existingcount->date;
+            $lastsharedcount = $Existingcount->count;
+        // }
+            $lastshareddate = Carbon::parse($date);
+        // $date1 = Carbon::createFromFormat('dd-MM-YYYY', $today);
+        // $date2 = Carbon::createFromFormat('dd-MM-YYYY', $lastclickeddate);
+       // var_dump($date1,$date2);
+            if($today->eq($lastshareddate)){
+            // if(strcmp($today,$lastclickeddate)==0){
+                // if($date1->eq($date2)){
+                   
+            DB::table('whatsapp_share_count')
+                ->where('product_id',$productId)
+                ->where('social_media',$medium)
+                ->orderBy('slno', 'desc')
+                ->take(1)
+                ->update(['count' => ($lastsharedcount+1)]);
+                $status ="success";
+            }else{
+                DB::table('whatsapp_share_count')->insert(
+                    array(
+                            'product_id' => $productId,
+                            'social_media'=> $medium,
+                            'count'     =>   1, 
+                        'date'   =>   date('Y-m-d H:i:s' , strtotime($today))
+                    )
+            );
+            $status ="success";
+            }
+        }else{
+            DB::table('whatsapp_share_count')->insert(
+                array(
+                        'product_id' => $productId,
+                        'social_media'=> $medium,
+                        'count'     =>   1, 
+                    'date'   =>   date('Y-m-d H:i:s' , strtotime($today))
+                )
+            );
+            $status ="success";
+        }
+        // foreach($Existingcount as $countRec){
+       
+        return response(array(
+            'status' => $status,
+            'date1' => $today,
+            'date2' => $lastshareddate,
+            'date3' => $date,
+            'date4' => $lastshareddate
+        ),201,[]);
+        
+    }
+
+
 
 }
